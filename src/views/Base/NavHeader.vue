@@ -1,9 +1,9 @@
 <template>
   <div class="nav-header" :style="{ left: leftBarCollapse ? '201px' : '80px' }">
     <div class="pull-right">
-      <el-button class="go-link" @click="downloadEnterprise" v-if="!IS_ENTERPRISE">
+      <!-- <el-button class="go-link" @click="downloadEnterprise" v-if="!IS_ENTERPRISE">
         {{ $t('Base.upgrade') }}<el-icon><right /></el-icon>
-      </el-button>
+      </el-button> -->
 
       <el-tooltip effect="dark" :content="alertText" placement="bottom" :show-arrow="false">
         <div class="func-item">
@@ -15,7 +15,7 @@
         </div>
       </el-tooltip>
 
-      <el-tooltip
+      <!-- <el-tooltip
         effect="dark"
         :content="$t('components.help')"
         placement="bottom"
@@ -24,7 +24,7 @@
         <a href="javascript:;" @click="handleShowHelp" class="link-help">
           <i class="iconfont icon-question"></i>
         </a>
-      </el-tooltip>
+      </el-tooltip> -->
 
       <el-tooltip
         effect="dark"
@@ -47,9 +47,9 @@
 
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item command="users">
+            <!-- <el-dropdown-item command="users">
               {{ $t('components.usersManagement') }}
-            </el-dropdown-item>
+            </el-dropdown-item> -->
             <el-dropdown-item divided command="logout">
               {{ $t('components.logOut') }}
             </el-dropdown-item>

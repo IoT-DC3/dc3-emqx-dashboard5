@@ -142,7 +142,7 @@ export default defineComponent({
     ]
 
     const system = [
-      { title: 'users', path: '/users' },
+      /* { title: 'users', path: '/users' }, */
       { title: 'api-key', path: '/api-key' },
     ]
 
