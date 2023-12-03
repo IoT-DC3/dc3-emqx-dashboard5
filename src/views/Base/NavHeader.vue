@@ -4,7 +4,7 @@
       <!-- <el-button class="go-link" @click="downloadEnterprise" v-if="!IS_ENTERPRISE">
         {{ $t('Base.upgrade') }}<el-icon><right /></el-icon>
       </el-button> -->
-
+      <span class="func-item">仅供 DC3 测试环境使用！</span>
       <el-tooltip effect="dark" :content="alertText" placement="bottom" :show-arrow="false">
         <div class="func-item">
           <el-badge :is-dot="!!alertCount">
@@ -50,7 +50,7 @@
             <!-- <el-dropdown-item command="users">
               {{ $t('components.usersManagement') }}
             </el-dropdown-item> -->
-            <el-dropdown-item divided command="logout">
+            <el-dropdown-item command="logout">
               {{ $t('components.logOut') }}
             </el-dropdown-item>
           </el-dropdown-menu>
@@ -66,7 +66,7 @@
 import { loadAlarm } from '@/api/common'
 import { toLogin } from '@/router'
 import { useStore } from 'vuex'
-import { Right, Bell, Setting } from '@element-plus/icons-vue'
+import { Bell, Setting } from '@element-plus/icons-vue'
 import { ElNotification, ElMessageBox } from 'element-plus'
 import { computed, defineComponent, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -79,7 +79,6 @@ import Help from '../Settings/Help.vue'
 export default defineComponent({
   name: 'NavHeader',
   components: {
-    Right,
     Bell,
     Setting,
     Settings,
